@@ -1,0 +1,1 @@
+RewriteRule ^nameInput/(.*)$ index.php?controller=nameInputController&data=$1 [L]

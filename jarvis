@@ -1,0 +1,85 @@
+#!/usr/bin/env php
+
+<?php 
+
+/*
+|--------------------------------------------------------------------------
+| Include config file
+|--------------------------------------------------------------------------
+|
+| Jarvis need to include some config for work correctly
+|
+*/
+
+require_once './vendor/dimension3/config/config.php';
+
+/*
+|--------------------------------------------------------------------------
+| Include app´s core
+|--------------------------------------------------------------------------
+|
+| Jarvis need to include the core for work correctly
+|
+*/
+
+require_once APP_CORE;
+
+/*
+|--------------------------------------------------------------------------
+| Load arguments and iniciate app
+|--------------------------------------------------------------------------
+|
+| Jarvis need to load the arguments passing by console and format it
+|
+*/
+
+$app = new App($argv);
+$_ARGUMENTS = $app->arguments($argv);
+
+/*
+|--------------------------------------------------------------------------
+| Switch into the different functions to load
+|--------------------------------------------------------------------------
+|
+| Jarvis need to switch the different functions to load it and passing 
+| parameters
+|
+*/
+
+switch($_ARGUMENTS['command']) {
+
+    default:
+        $app->getCopyritght();
+        echo 'Command not exists or empty, nothing to do.'.PHP_EOL;
+        echo 'Have a nice day ;)'.PHP_EOL;
+    break;
+
+    case 'create':
+        $app->create($_ARGUMENTS['option']);
+    break;
+
+    case 'remove':
+        $app->remove($_ARGUMENTS['option']);
+    break;
+
+    case 'route':
+        $app->route($_ARGUMENTS['option'], $_ARGUMENTS['name'], $_ARGUMENTS['platform']);
+    break;
+
+    case 'insertRoute':
+
+        switch ($_ARGUMENTS['option']) {
+
+            case 'htaccess':
+                $app->manageHtaccess($_ARGUMENTS['name']);
+            break;
+
+        }
+
+    break;
+
+    case 'view':
+        $app->view($_ARGUMENTS['option'], $_ARGUMENTS['name'], $_ARGUMENTS['platform']);
+    break;
+
+}
