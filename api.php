@@ -30,7 +30,11 @@
     */
 
     require_once CONFIG_APP;
- 
+
+    require_once './vendor/autoload.php';
+
+    require_once './vendor/Torch-master/components/routing/index.php';
+
     /*
     |--------------------------------------------------------------------------
     | Class Autoload
@@ -83,4 +87,6 @@
     |
     */
 
-    require_once ROUTES_DIR;
+    require_once API_ROUTES_DIR;
+
+    require_once './vendor/Torch-master/components/routing/include.php';

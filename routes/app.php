@@ -9,6 +9,6 @@
     |
     */
 
-    $router->get('/', function(){
+    $router->get('/',function(){
         return View::CreateView('home');
     });

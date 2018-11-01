@@ -76,7 +76,7 @@
     |
     */
 
-    // require_once CORE_ROUTES_DIR;
+    require_once CORE_ROUTES_DIR;
 
     /*
     |--------------------------------------------------------------------------

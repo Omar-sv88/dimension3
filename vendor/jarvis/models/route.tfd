@@ -1,3 +1,0 @@
-    Route::set('nameInput', function(){
-        View::CreateView('nameInput');
-    });

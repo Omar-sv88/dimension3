@@ -66,18 +66,6 @@ switch($_ARGUMENTS['command']) {
         $app->route($_ARGUMENTS['option'], $_ARGUMENTS['name'], $_ARGUMENTS['platform']);
     break;
 
-    case 'insertRoute':
-
-        switch ($_ARGUMENTS['option']) {
-
-            case 'htaccess':
-                $app->manageHtaccess($_ARGUMENTS['name']);
-            break;
-
-        }
-
-    break;
-
     case 'view':
         $app->view($_ARGUMENTS['option'], $_ARGUMENTS['name'], $_ARGUMENTS['platform']);
     break;

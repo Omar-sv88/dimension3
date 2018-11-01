@@ -7,8 +7,8 @@
     |
     | This is the core's routes
     |
-    */   
-    
+    */
+
     // Route::set('error', function(){
     //     View::CreateView('error');
     // });
