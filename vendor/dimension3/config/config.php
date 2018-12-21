@@ -20,7 +20,7 @@
     |
     */
 
-    define('FRAMEWORK_VERSION',  'V0.1 BETA');
+    define('FRAMEWORK_VERSION',  'V0.2.0 BETA');
 
     /*
     |--------------------------------------------------------------------------

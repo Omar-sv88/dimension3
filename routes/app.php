@@ -9,6 +9,8 @@
     |
     */
 
-    $router->get('/',function(){
-        return View::CreateView('home');
-    });
+    // $router->get('/',function(){
+    //     return View::CreateView('home');
+    // });
+
+    $router->get('/','HomeController@omar');

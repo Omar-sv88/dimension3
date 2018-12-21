@@ -8,3 +8,7 @@
     | This is the Api app's routes
     |
     */
+
+    $router->get('/api',function(){
+        echo 'api!';
+    });

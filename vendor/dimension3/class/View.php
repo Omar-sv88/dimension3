@@ -6,7 +6,7 @@ class View{
 
     /**
      * Create the view.
-     * 
+     *
      * This create the view and loads it
      *
      * @param  $viewName
@@ -14,8 +14,6 @@ class View{
      */
 
     public static function CreateView($viewName, $params = []) {
-
-        
 
         if (isset($_REQUEST['api']) && !empty($_REQUEST['api'])){
 
@@ -29,13 +27,13 @@ class View{
 
                 $blade = new Blade(VIEWS_DIR, CACHE_VIEWS_DIR);
 
-                if ($viewName !== 'error.blade.php'){
-                    $_db = new DB;
-                    // require_once CONTROLLER_CHARGER;
-                }
+                // if ($viewName !== 'error.blade.php'){
+                //     $_db = new DB;
+                //     require_once CONTROLLER_CHARGER;
+                // }
 
                 echo $blade->view()->make($viewName, $params)->render();
-                
+
             }else {
 
                 echo "Error!! View no exists";
@@ -48,4 +46,3 @@ class View{
     }
 
 }
-    

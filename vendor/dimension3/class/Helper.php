@@ -4,8 +4,8 @@ class Helper{
 
     /**
      * Date format.
-     * 
-     * You can enter a date format and change it to dd.mm.yyyy with the 
+     *
+     * You can enter a date format and change it to dd.mm.yyyy with the
      * separator you can choose
      *
      * @param  $date = yyyy-mm-dd
@@ -32,8 +32,8 @@ class Helper{
 
     /**
      * Get month's name.
-     * 
-     * You can enter month's number and returns the name 
+     *
+     * You can enter month's number and returns the name
      * Default's name are in spanish
      *
      * @param  $month = number or string
@@ -60,7 +60,7 @@ class Helper{
 
     /**
      * Sanitize texts.
-     * 
+     *
      * You can sanitize the texts from sql inyection and special chars
      *
      * @param  $data = string
@@ -73,12 +73,12 @@ class Helper{
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
-        
+
     }
 
     /**
      * Json formater.
-     * 
+     *
      * You can format an array in json
      *
      * @param  $data = string
@@ -87,17 +87,21 @@ class Helper{
      */
 
     static function json($data,$mode){
+
         switch ($mode) {
                 case 'convert':
+
                         $data = json_encode($data);
+
                 break;
 
                 case 'deconvert':
 
                 break;
         }
+
         return $data;
+
     }
 
 }
-    

@@ -15,7 +15,7 @@ class DB{
      *
      * @var string
      */
-    
+
     private $host;
 
      /**
@@ -23,7 +23,7 @@ class DB{
      *
      * @var string
      */
-    
+
     private $db;
 
      /**
@@ -31,7 +31,7 @@ class DB{
      *
      * @var string
      */
-    
+
     private $user;
 
      /**
@@ -39,7 +39,7 @@ class DB{
      *
      * @var string
      */
-    
+
     private $pass;
 
      /**
@@ -47,7 +47,7 @@ class DB{
      *
      * @var string
      */
-    
+
     private $charset;
 
      /**
@@ -55,7 +55,7 @@ class DB{
      *
      * @var string
      */
-    
+
     private $pl;
 
     /**
@@ -71,7 +71,7 @@ class DB{
      *
      * @var string
      */
-    
+
     private $function;
 
     /**
@@ -79,7 +79,7 @@ class DB{
      *
      * @var string
      */
-    
+
     private $token;
 
     /**
@@ -103,7 +103,7 @@ class DB{
      *
      * @var array
      */
-    
+
     private $params;
 
     /**
@@ -169,7 +169,7 @@ class DB{
 
     /**
      * Mysql Conection.
-     * 
+     *
      * We prepare the conection with the mysql server
      *
      * @return object
@@ -186,7 +186,7 @@ class DB{
 
     /**
      * D3 Conection.
-     * 
+     *
      * We connect to D3's db and make something you need
      *
      * @param  $prog = string
@@ -195,7 +195,7 @@ class DB{
      * @return array
      */
 
-    public function d3($prog, $params, $json = 0){
+    private function d3($prog, $params, $json = 0){
 
         $command = $this->pl.' '.$prog.'#'.$params;
         echo $command.PHP_EOL;
@@ -208,7 +208,7 @@ class DB{
 
     /**
      * Set mode on D3's db.
-     * 
+     *
      * @param  $mode = string
      * @return void
      */
@@ -222,7 +222,7 @@ class DB{
 
     /**
      * Set token on D3's db.
-     * 
+     *
      * @param  $token = string
      * @return void
      */
@@ -236,7 +236,7 @@ class DB{
 
     /**
      * Set param to search on D3's db.
-     * 
+     *
      * @param  $data = string
      * @return void
      */
@@ -250,7 +250,7 @@ class DB{
 
     /**
      * Set function on D3's db.
-     * 
+     *
      * @param  $function = string
      * @return void
      */
@@ -264,7 +264,7 @@ class DB{
 
     /**
      * Set json on D3's db.
-     * 
+     *
      * @param  $json = number  0 = off 1 = on
      * @return void
      */
@@ -278,7 +278,7 @@ class DB{
 
      /**
      * Set params on D3's db.
-     * 
+     *
      * @param  $params = array
      * @return void
      */
@@ -292,7 +292,7 @@ class DB{
 
     /**
      * Set app's user for D3's db.
-     * 
+     *
      * @param  $params = array
      * @return void
      */
@@ -306,7 +306,7 @@ class DB{
 
     /**
      * Set nri for D3's db.
-     * 
+     *
      * @param  $params = array
      * @return void
      */
@@ -320,7 +320,7 @@ class DB{
 
     /**
      * Execute query on D3's db.
-     * 
+     *
      * @return array
      */
 
@@ -360,7 +360,7 @@ class DB{
 
         $sendParams = implode('#', $sendParams);
         return $this->d3($this->function, $sendParams, $this->json);
-        
+
     }
 
 }

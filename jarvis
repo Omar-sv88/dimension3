@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 
-<?php 
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ $_ARGUMENTS = $app->arguments($argv);
 | Switch into the different functions to load
 |--------------------------------------------------------------------------
 |
-| Jarvis need to switch the different functions to load it and passing 
+| Jarvis need to switch the different functions to load it and passing
 | parameters
 |
 */
@@ -49,25 +49,35 @@ $_ARGUMENTS = $app->arguments($argv);
 switch($_ARGUMENTS['command']) {
 
     default:
+
         $app->getCopyritght();
         echo 'Command not exists or empty, nothing to do.'.PHP_EOL;
         echo 'Have a nice day ;)'.PHP_EOL;
+
     break;
 
     case 'create':
+
         $app->create($_ARGUMENTS['option']);
+
     break;
 
     case 'remove':
+
         $app->remove($_ARGUMENTS['option']);
+
     break;
 
     case 'route':
+
         $app->route($_ARGUMENTS['option'], $_ARGUMENTS['name'], $_ARGUMENTS['platform']);
+
     break;
 
     case 'view':
+
         $app->view($_ARGUMENTS['option'], $_ARGUMENTS['name'], $_ARGUMENTS['platform']);
+
     break;
 
 }
