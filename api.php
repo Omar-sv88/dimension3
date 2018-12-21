@@ -35,6 +35,8 @@
 
     require_once './vendor/Torch-master/components/routing/index.php';
 
+    require_once './vendor/ctoken_library/index.php';
+
     /*
     |--------------------------------------------------------------------------
     | Class Autoload
