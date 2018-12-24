@@ -97,7 +97,7 @@
     |
     */
 
-    define('CLASS_DIR', './vendor/dimension3/class/');
+    define('CLASS_DIR', './vendor/dimension3/core/');
 
     /*
     |--------------------------------------------------------------------------

@@ -1,5 +1,7 @@
 <?php
 
+namespace Jarvis;
+
 class App {
 
     /**

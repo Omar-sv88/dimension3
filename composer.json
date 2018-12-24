@@ -1,5 +1,15 @@
 {
     "require": {
-        "philo/laravel-blade": "^3.1"
+        "philo/laravel-blade": "^3.1",
+        "illuminate/routing": "^5.5",
+        "illuminate/events": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "vendor/app/src/",
+            "Plugins\\": "vendor/",
+            "Dimension3\\": "vendor/dimension3/",
+            "Jarvis\\": "vendor/jarvis/"
+        }
     }
 }

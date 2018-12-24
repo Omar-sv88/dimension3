@@ -7,6 +7,8 @@
  * @author   Developer CloudXData <dev@cloudxdata.com>
  */
 
+namespace Plugins\CTOKEN;
+
 /**
  * We need use the class JWT
  *

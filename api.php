@@ -33,7 +33,7 @@
 
     require_once './vendor/autoload.php';
 
-    require_once './vendor/Torch-master/components/routing/index.php';
+    require_once './vendor/middleware/index.php';
 
     require_once './vendor/ctoken_library/index.php';
 
@@ -91,4 +91,4 @@
 
     require_once API_ROUTES_DIR;
 
-    require_once './vendor/Torch-master/components/routing/include.php';
+    require_once './vendor/middleware/include.php';

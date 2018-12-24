@@ -17,6 +17,7 @@ class ComposerStaticInit81851d79fa7cbbb0c1aecbb392449fc0
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Contracts\\' => 18,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\HttpKernel\\' => 29,
@@ -30,7 +31,12 @@ class ComposerStaticInit81851d79fa7cbbb0c1aecbb392449fc0
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
+            'Plugins\\' => 8,
             'Philo\\Blade\\' => 12,
+        ),
+        'J' => 
+        array (
+            'Jarvis\\' => 7,
         ),
         'I' => 
         array (
@@ -48,6 +54,11 @@ class ComposerStaticInit81851d79fa7cbbb0c1aecbb392449fc0
         'D' => 
         array (
             'Doctrine\\Common\\Inflector\\' => 26,
+            'Dimension3\\' => 11,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
         ),
     );
 
@@ -59,6 +70,10 @@ class ComposerStaticInit81851d79fa7cbbb0c1aecbb392449fc0
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Symfony\\Contracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/contracts',
         ),
         'Symfony\\Component\\Translation\\' => 
         array (
@@ -100,9 +115,17 @@ class ComposerStaticInit81851d79fa7cbbb0c1aecbb392449fc0
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'Plugins\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/vendor',
+        ),
         'Philo\\Blade\\' => 
         array (
             0 => __DIR__ . '/..' . '/philo/laravel-blade/src',
+        ),
+        'Jarvis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jarvis',
         ),
         'Illuminate\\View\\' => 
         array (
@@ -147,6 +170,14 @@ class ComposerStaticInit81851d79fa7cbbb0c1aecbb392449fc0
         'Doctrine\\Common\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
+        ),
+        'Dimension3\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dimension3',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/app/src',
         ),
     );
 
