@@ -2,12 +2,13 @@
 
     /*
     |--------------------------------------------------------------------------
-    | Globals
+    | Config
     |--------------------------------------------------------------------------
     |
-    | This is the global's config site
+    | This is the config's site
     |
     */
 
     define('GLOBALS_APP', './app/config/globals.php');
-    define('CTOKEN_PASS', 'C0ud@D4taS0lut10ns');
+    define('CTOKEN_KEY', 'C0ud@D4taS0lut10ns');
+    define('APP_ENV', 'DEV');

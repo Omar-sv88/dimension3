@@ -200,9 +200,23 @@ class DB{
     private function d3($prog, $params, $json = 0){
 
         $command = $this->pl.' '.$prog.'#'.$params;
-        echo $command.PHP_EOL;
-        exit;
-        $exec = exec($command,$result);
+
+        switch (APP_ENV) {
+
+            case 'DEV':
+
+                $result = $command;
+
+            break;
+
+            case 'PROD':
+
+                $exec = exec($command,$result);
+
+            break;
+
+        }
+
         if ($json == 1) { $result = Helper::json($result,'convert'); }
         return $result;
 
@@ -327,6 +341,7 @@ class DB{
      */
 
     public function execute(){
+
         $sendParams = [
             $this->token,
             $this->appUser,
@@ -336,32 +351,52 @@ class DB{
         ];
         $lock = 0;
 
-        foreach ($this->params as $number => $param) {
+        if (!empty($this->params)) {
 
-            if (is_array($param)) {
+            foreach ($this->params as $number => $param) {
 
-                foreach ($param as $subparam) {
-                    if ($lock == 0) { $subParam[] = $subparam; }
+                if (is_array($param)) {
+
+                    foreach ($param as $subparam) {
+                        if ($lock == 0) { $subParam[] = $subparam; }
+                    }
+
+                    if ($lock == 0) {
+                        $sendParams[$number + 5] = implode(chr(126), $subParam);
+                    }
+
+                    $lock = 1;
+                    unset($subParam);
+
                 }
+                else {
 
-                if ($lock == 0) {
-                    $sendParams[$number + 5] = implode(chr(126), $subParam);
+                    $sendParams[] = $param;
+                    $lock = 0;
+
                 }
-
-                $lock = 1;
-                unset($subParam);
-
             }
-            else {
 
-                $sendParams[] = $param;
-                $lock = 0;
-
-            }
         }
 
         $sendParams = implode('#', $sendParams);
-        return $this->d3($this->function, $sendParams, $this->json);
+        $query = $this->d3($this->function, $sendParams, $this->json);
+
+        switch (APP_ENV) {
+
+            case 'DEV':
+
+                var_dump($query);
+
+            break;
+
+            case 'PROD':
+
+                return  $query;
+
+            break;
+
+        }
 
     }
 

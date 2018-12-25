@@ -17,7 +17,16 @@ class StartSession
     public function handle($request, Closure $next, $guard = null)
     {
         if (session_status() == PHP_SESSION_NONE) {
+
             session_start();
+            $CTOKEN = new CTOKEN(CTOKEN_KEY);
+            $params = [
+                    'name'  => (isset($_REQUEST['user'])) ? $_REQUEST['user']: '',
+                    'pass'  => (isset($_REQUEST['pass'])) ? $_REQUEST['pass']: '',
+                    'nri'   => '0000000000'
+            ];
+            $_SESSION['user']['token'] = $CTOKEN->encode($params);
+
         }
 
         return $next($request);
