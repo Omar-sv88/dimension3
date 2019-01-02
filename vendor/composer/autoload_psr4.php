@@ -35,5 +35,6 @@ return array(
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Common/Inflector'),
     'Dimension3\\' => array($vendorDir . '/dimension3'),
     'App\\' => array($vendorDir . '/app/src'),
+    'Api\\' => array($baseDir . '/api'),
     '' => array($vendorDir . '/nesbot/carbon/src'),
 );

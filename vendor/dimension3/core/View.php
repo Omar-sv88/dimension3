@@ -17,9 +17,14 @@ class View{
 
         if (isset($_REQUEST['api']) && !empty($_REQUEST['api'])){
 
-            $blade = new Blade(API_VIEWS_DIR, CACHE_VIEWS_DIR);
             header('Content-Type: application/json');
-            require_once './api/'.$viewName.'.view.php';
+
+            if (file_exists(API_VIEWS_DIR.'/'.$viewName.'.blade.php')) {
+
+                $blade = new Blade(API_VIEWS_DIR, CACHE_VIEWS_DIR);
+                require_once './api/'.$viewName.'.view.php';
+
+            }
 
         }else {
 

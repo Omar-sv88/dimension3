@@ -9,7 +9,8 @@
             "App\\": "vendor/app/src/",
             "Plugins\\": "vendor/",
             "Dimension3\\": "vendor/dimension3/",
-            "Jarvis\\": "vendor/jarvis/"
+            "Jarvis\\": "vendor/jarvis/",
+	    "Api\\": "api/"
         }
     }
 }

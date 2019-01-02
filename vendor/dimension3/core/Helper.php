@@ -106,4 +106,20 @@ class Helper{
 
     }
 
+    /**
+     * Is Api.
+     *
+     * You can know if the request is to ApiRest or Web
+     *
+     * @return number
+     */
+
+    static function isApi(){
+
+        $uri = explode('/', $_SERVER['REQUEST_URI']);
+        $uri = $uri[1];
+        return (!empty($uri) && $uri === 'api') ? 1: 0;
+
+    }
+
 }

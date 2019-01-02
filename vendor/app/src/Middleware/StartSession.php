@@ -2,7 +2,6 @@
 
 namespace App\Middleware;
 use Closure;
-use Plugins\CTOKEN\CTOKEN;
 
 class StartSession
 {
@@ -19,13 +18,6 @@ class StartSession
         if (session_status() == PHP_SESSION_NONE) {
 
             session_start();
-            $CTOKEN = new CTOKEN(CTOKEN_KEY);
-            $params = [
-                    'name'  => (isset($_REQUEST['user'])) ? $_REQUEST['user']: '',
-                    'pass'  => (isset($_REQUEST['pass'])) ? $_REQUEST['pass']: '',
-                    'nri'   => '0000000000'
-            ];
-            $_SESSION['user']['token'] = $CTOKEN->encode($params);
 
         }
 
