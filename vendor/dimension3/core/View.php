@@ -15,14 +15,14 @@ class View{
 
     public static function CreateView($viewName, $params = []) {
 
-        if (isset($_REQUEST['api']) && !empty($_REQUEST['api'])){
+        if (Dimension3\core\Helper::isApi() === 1){
 
             header('Content-Type: application/json');
 
             if (file_exists(API_VIEWS_DIR.'/'.$viewName.'.blade.php')) {
 
                 $blade = new Blade(API_VIEWS_DIR, CACHE_VIEWS_DIR);
-                require_once './api/'.$viewName.'.view.php';
+                echo $blade->view()->make($viewName, $params)->render();
 
             }
 
