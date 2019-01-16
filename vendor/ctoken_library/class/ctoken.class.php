@@ -4,7 +4,7 @@
  *
  * @package  CToken Class Library
  * @version  1.0.0
- * @author   Developer CloudXData <dev@cloudxdata.com>
+ * @author   Omar Santos <dev@omarsantos.es>
  */
 
 namespace Plugins\CTOKEN;
