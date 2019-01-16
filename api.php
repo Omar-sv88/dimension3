@@ -4,7 +4,7 @@
      * Dimension 3 - PHP Framework
      *
      * @package  Dimension3
-     * @author   Developer CloudXData <dev@cloudxdata.com>
+     * @author   Omar Santos <dev@omarsantos.es>
      */
 
     define('DIMENSION3_START', microtime(true));
