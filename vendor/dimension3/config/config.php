@@ -31,7 +31,7 @@
     |
     */
 
-    define('DEVELOPER_FRAMEWORK',  'Developer CloudXData <dev@cloudxdata.com>');
+    define('DEVELOPER_FRAMEWORK',  'Omar Santos <dev@omarsantos.es>');
 
     /*
     |--------------------------------------------------------------------------
