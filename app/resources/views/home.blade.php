@@ -41,7 +41,7 @@
         <div>
             <h1 class="text-center text-dark">Dimension 3 PHP Framework</h1>
             <h4 class="text-center text-dark">
-                By CloudXData
+                By Omar Santos <dev@omarsantos.es>
                 <small>&copy; {{ date("Y") }}</small>
             </h4>
         </div>
